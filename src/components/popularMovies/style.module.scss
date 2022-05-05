@@ -1,0 +1,14 @@
+.popular_movies{
+  margin: 20px 0;
+  position: relative;
+  h2{
+    margin-bottom: 20px;
+  }
+}
+
+.popular_movies_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}

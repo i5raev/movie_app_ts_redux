@@ -1,0 +1,9 @@
+export  {default as Banner} from './banner';
+export  {default as LoadingSpinner} from './loadingSpinner';
+export  {default as PopularMovies} from './popularMovies';
+export  {default as SearchMovies} from './searchMovies';
+export  {default as MoviesItem} from './moviesItem';
+export  {default as DetailMovie} from './detailMovie';
+export  {default as RecommendedMovies} from './recommendedMovies';
+export  {default as Favourite} from './favourite';
+export  {default as Paginator} from './paginator';

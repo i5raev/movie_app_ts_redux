@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {lazy,Suspense} from 'react'
+import {
+    BrowserRouter as Router, Route,
+    Switch
+} from "react-router-dom";
+import {LoadingSpinner} from "./components";
+import ScrollToTop from "./helpers/scrollToTop";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const HomePage = lazy(() => import('./pages/homePage'));
+const MovieDetailPage = lazy(() => import('./pages/movieDetailPage'));
+
+const App = () => {
+    return (
+        <Router>
+            <Suspense fallback={<LoadingSpinner/>}>
+                <Switch>
+                    <Route exact path='/' component={HomePage}/>
+                    <Route exact path='/movies/:id' component={MovieDetailPage}/>
+                </Switch>
+            </Suspense>
+
+            <ScrollToTop/>
+        </Router>
+    );
 }
 
 export default App;
