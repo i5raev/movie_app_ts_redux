@@ -1,7 +1,7 @@
 {
   "name": "test_project",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://i5raev.github.io/movie_app_ts_redux",
   "dependencies": {
     "@react-bootstrap/pagination": "^1.0.0",

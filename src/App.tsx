@@ -11,7 +11,7 @@ const MovieDetailPage = lazy(() => import('./pages/movieDetailPage'));
 
 const App = () => {
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <Suspense fallback={<LoadingSpinner/>}>
                 <Switch>
                     <Route exact path='/' component={HomePage}/>
